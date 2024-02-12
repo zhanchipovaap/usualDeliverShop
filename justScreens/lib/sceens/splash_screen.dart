@@ -15,11 +15,51 @@ class _SplashScreenState extends State<SplashScreen> {
     final theme = Theme.of(context);
     return Scaffold(
       body: NestedScrollView(
-        body: const Column(),
+        body: Container(
+          decoration: BoxDecoration(
+            color: theme.splashColor,
+          ),
+          child: Column(
+            children: [
+              SizedBox(height: MediaQuery.of(context).size.height * 0.036),
+              Container(
+                height: MediaQuery.of(context).size.height * 0.115,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/BOX.png'),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.025),
+              const Text(
+                "Non-Contact\n Deliveries",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  height: 1.2,
+                  color: Color(0xff2D0C57),
+                  fontFamily: 'SFproDisplayBold',
+                  fontSize: 30,
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.025),
+              const Text(
+                "When placing an order, select the option\n “Contactless delivery” and the courier will leave\n your order at the door.",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color(0xff9586A8),
+                  fontFamily: 'SFproRegular',
+                  fontSize: 15,
+                ),
+              ),
+              
+            ],
+          ),
+        ),
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
             SliverAppBar(
-              expandedHeight: MediaQuery.of(context).size.height * 0.35,
+              expandedHeight: MediaQuery.of(context).size.height * 0.30,
               leading: Container(
                 decoration: BoxDecoration(
                   color: theme.primaryColor,
@@ -28,10 +68,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                child: const Column(),
               ),
               toolbarHeight: 100,
-              leadingWidth:100,
+              leadingWidth: 100,
               floating: true,
               pinned: false,
               snap: true,
@@ -57,7 +96,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     Container(
                       height: 20,
                       decoration: const BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xffF6F5F5), //F6F5F5
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20.0),
                           topRight: Radius.circular(20.0),

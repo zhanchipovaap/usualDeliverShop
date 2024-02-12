@@ -10,9 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const primaryColor = Color(0xffa259ff);
+    const splashColor = Color(0xffF6F5F5);
     return MaterialApp(
       theme: ThemeData(
         primaryColor: primaryColor,
+        splashColor: splashColor,
         colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
         useMaterial3: true,
       ),

@@ -39,6 +39,15 @@ flutter:
     - assets/images/BG.png
     - assets/images/BG2.png
     - assets/images/LOGO.png
+    - assets/images/BOX.png
+  
+  fonts:
+    - family: SFproDisplayBold
+      fonts:
+        - asset: assets/fonts/SF-Pro-Display-Bold.otf
+    - family: SFproRegular
+      fonts:
+        - asset: assets/fonts/SF-Pro.ttf
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
