@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key, this.title});
-
-  final String? title;
+  const SplashScreen({super.key});
 
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -17,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: NestedScrollView(
         body: Container(
           decoration: BoxDecoration(
-            color: theme.splashColor,
+            color: theme.canvasColor,
           ),
           child: Column(
             children: [
@@ -37,25 +35,16 @@ class _SplashScreenState extends State<SplashScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(
                     vertical: MediaQuery.of(context).size.height * 0.025),
-                child: const Text(
+                child: Text(
                   "Non-Contact\n Deliveries",
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    height: 1.2,
-                    color: Color(0xff2D0C57),
-                    fontFamily: 'SFproDisplayBold',
-                    fontSize: 30,
-                  ),
+                  style: theme.textTheme.titleLarge,
                 ),
               ),
-              const Text(
+              Text(
                 "When placing an order, select the option\n “Contactless delivery” and the courier will leave\n your order at the door.",
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xff9586A8),
-                  fontFamily: 'SFproRegular',
-                  fontSize: 15,
-                ),
+                style: theme.textTheme.bodyMedium,
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -70,13 +59,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     backgroundColor: const Color(0xff0BCE83),
                     padding: const EdgeInsets.all(10),
                   ),
-                  child: const Text(
+                  child: Text(
                     'ORDER NOW',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: 'SFproText',
-                      fontSize: 15,
-                    ),
+                    style: theme.textTheme.labelMedium,
                   ),
                 ),
               ),
@@ -133,9 +118,9 @@ class _SplashScreenState extends State<SplashScreen> {
                   children: <Widget>[
                     Container(
                       height: 20,
-                      decoration: const BoxDecoration(
-                        color: Color(0xffF6F5F5), //F6F5F5
-                        borderRadius: BorderRadius.only(
+                      decoration: BoxDecoration(
+                        color: theme.canvasColor, //F6F5F5
+                        borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(20.0),
                           topRight: Radius.circular(20.0),
                         ),

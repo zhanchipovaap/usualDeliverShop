@@ -40,6 +40,13 @@ flutter:
     - assets/images/BG2.png
     - assets/images/LOGO.png
     - assets/images/BOX.png
+    - assets/images/search.png
+    - assets/images/categories/Bread.png
+    - assets/images/categories/Drinks.png
+    - assets/images/categories/Fruits.png
+    - assets/images/categories/Pasta.png
+    - assets/images/categories/Sweets.png
+    - assets/images/categories/Vegetables.png
   
   fonts:
     - family: SFproDisplayBold
