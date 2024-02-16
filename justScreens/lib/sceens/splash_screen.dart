@@ -21,28 +21,33 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
           child: Column(
             children: [
-              SizedBox(height: MediaQuery.of(context).size.height * 0.036),
-              Container(
-                height: MediaQuery.of(context).size.height * 0.115,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/BOX.png'),
-                    fit: BoxFit.contain,
+              Padding(
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.036),
+                child: Container(
+                  height: MediaQuery.of(context).size.height * 0.115,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/BOX.png'),
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.025),
-              const Text(
-                "Non-Contact\n Deliveries",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  height: 1.2,
-                  color: Color(0xff2D0C57),
-                  fontFamily: 'SFproDisplayBold',
-                  fontSize: 30,
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    vertical: MediaQuery.of(context).size.height * 0.025),
+                child: const Text(
+                  "Non-Contact\n Deliveries",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    height: 1.2,
+                    color: Color(0xff2D0C57),
+                    fontFamily: 'SFproDisplayBold',
+                    fontSize: 30,
+                  ),
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.025),
               const Text(
                 "When placing an order, select the option\n “Contactless delivery” and the courier will leave\n your order at the door.",
                 textAlign: TextAlign.center,
@@ -52,7 +57,40 @@ class _SplashScreenState extends State<SplashScreen> {
                   fontSize: 15,
                 ),
               ),
-              
+              Padding(
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.06),
+                child: TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    minimumSize: Size(MediaQuery.of(context).size.width-20,50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    backgroundColor: const Color(0xff0BCE83),
+                    padding: const EdgeInsets.all(10),
+                  ),
+                  child: const Text(
+                    'ORDER NOW',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'SFproText',
+                      fontSize: 15,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.018),
+                child: TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    foregroundColor: const Color(0xff9586A8),
+                  ),
+                  child: const Text('DISMISS'),
+                ),
+              ),
             ],
           ),
         ),

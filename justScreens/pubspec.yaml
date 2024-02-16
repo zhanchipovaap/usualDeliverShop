@@ -48,6 +48,9 @@ flutter:
     - family: SFproRegular
       fonts:
         - asset: assets/fonts/SF-Pro.ttf
+    - family: SFproText
+      fonts:
+        - asset: assets/fonts/sf-pro-text-regular.ttf
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
