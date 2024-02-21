@@ -23,6 +23,11 @@ class MyApp extends StatelessWidget {
             fontFamily: 'SFproDisplayBold',
             fontSize: 30,
           ),
+          titleSmall: TextStyle(
+            color: Color(0xff2D0C57),
+            fontFamily: 'SFproDisplayBold',
+            fontSize: 16,
+          ),
           bodyMedium: TextStyle(
             color: Color(0xff9586A8),
             fontFamily: 'SFproRegular',
