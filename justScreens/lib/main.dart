@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testproject/sceens/categories_screen.dart';
+import 'package:testproject/sceens/item_categories_screen.dart';
 import 'package:testproject/sceens/splash_screen.dart';
 
 void main() {
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
     const primaryColor = Color(0xffa259ff);//D9D0E3
     const canvasColor = Color(0xffF6F5F5);
     const borderColor = Color(0xffD9D0E3);
+    const textColor = Color(0xff9586A8);
 
     return MaterialApp(
       theme: ThemeData(
@@ -28,12 +30,18 @@ class MyApp extends StatelessWidget {
             fontFamily: 'SFproDisplayBold',
             fontSize: 16,
           ),
+          titleMedium: TextStyle(
+            color: Color(0xff2D0C57),
+            fontFamily: 'Roboto',
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
           bodyMedium: TextStyle(
-            color: Color(0xff9586A8),
+            color: textColor,
             fontFamily: 'SFproRegular',
             fontSize: 15,
           ),
-          labelMedium: TextStyle(
+          labelMedium: TextStyle(//это на кнопки
             color: Colors.white,
             fontFamily: 'SFproText',
             fontSize: 15,
@@ -42,10 +50,11 @@ class MyApp extends StatelessWidget {
         dividerColor: borderColor,
         primaryColor: primaryColor,
         canvasColor: canvasColor,
+        indicatorColor: textColor,
         colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
         useMaterial3: true,
       ),
-      home: CategoriesScreen(),
+      home: const ItemCategoryScreen(),
     );
   }
 }

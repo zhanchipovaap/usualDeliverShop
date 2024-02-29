@@ -50,6 +50,9 @@ flutter:
     - assets/images/tab_bar/grid.png
     - assets/images/tab_bar/shopping-cart.png
     - assets/images/tab_bar/user.png
+    - assets/images/category_items/Lettuce.png
+    - assets/images/category_items/cabbage.png
+    - assets/images/category_items/cauliflower.png    
   
   fonts:
     - family: SFproDisplayBold
@@ -61,6 +64,11 @@ flutter:
     - family: SFproText
       fonts:
         - asset: assets/fonts/sf-pro-text-regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

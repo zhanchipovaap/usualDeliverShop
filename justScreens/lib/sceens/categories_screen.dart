@@ -18,7 +18,7 @@ class CategoriesScreen extends StatelessWidget {
     CategoryIn("56", "Sweets", "assets/images/categories/Sweets.png"),
     CategoryIn("43", "Pasta", "assets/images/categories/Pasta.png"),
     CategoryIn("43", "Drinks", "assets/images/categories/Drinks.png"),
-  ];
+  ]; 
 
   @override
   Widget build(BuildContext context) {
@@ -48,17 +48,7 @@ class CategoriesScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        elevation: 100,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: [
-          BottomNavigationBarItem(icon: Image.asset('assets/images/tab_bar/grid.png'), label: "menu"),
-          BottomNavigationBarItem(
-              icon: Image.asset('assets/images/tab_bar/shopping-cart.png'), label: "shopping_cart"),
-          BottomNavigationBarItem(icon: Image.asset('assets/images/tab_bar/user.png'), label: "settings"),
-        ],
-      ),
+      bottomNavigationBar: const bottomMenu(),
     );
   }
 
@@ -103,6 +93,27 @@ class CategoriesScreen extends StatelessWidget {
   }
 }
 
+class bottomMenu extends StatelessWidget {
+  const bottomMenu({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      elevation: 100,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+      items: [
+        BottomNavigationBarItem(icon: Image.asset('assets/images/tab_bar/grid.png'), label: "menu"),
+        BottomNavigationBarItem(
+            icon: Image.asset('assets/images/tab_bar/shopping-cart.png'), label: "shopping_cart"),
+        BottomNavigationBarItem(icon: Image.asset('assets/images/tab_bar/user.png'), label: "settings"),
+      ],
+    );
+  }
+}
+
 class SearchWidget extends StatelessWidget {
   const SearchWidget({
     super.key,
@@ -130,7 +141,7 @@ class SearchWidget extends StatelessWidget {
                 padding: const EdgeInsets.all(16),
                 alignment: Alignment.topLeft,
                 child: Text(
-                  'Categories',
+                  title,
                   style: theme.textTheme.titleLarge,
                 ),
               ),
