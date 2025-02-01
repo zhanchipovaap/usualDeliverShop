@@ -53,6 +53,7 @@ flutter:
     - assets/images/category_items/Lettuce.png
     - assets/images/category_items/cabbage.png
     - assets/images/category_items/cauliflower.png    
+    - assets/images/item/BostonLettuce.png    
   
   fonts:
     - family: SFproDisplayBold
